@@ -1,5 +1,6 @@
 # Leet-Code-55-Jump-game
 For my final project for CMSC 510, I will tackling the leet code problem titled as "Jump Game". 
+https://leetcode.com/problems/jump-game/description/?envType=problem-list-v2&envId=dynamic-programming
 
 ## Description
 You are given an integer array nums. You are initially positioned at the array's first index, and each element in the array represents your maximum jump length at that position. 
