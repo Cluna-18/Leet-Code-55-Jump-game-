@@ -3,20 +3,20 @@ class Solution {
 public:
     bool canJump(vector<int>& nums) {
         int n = nums.size();
-        vector<bool> dp(n, false);
-        dp[0] = true;
+        vector<bool> dp(n,false); // Setting up 1D table, where each position is set as a
+                                // boolean on whether it can be reached or not.
+        dp[0] = true; // The first index is always reachable, so it is always true
 
         for (int i = 0; i < n; i++) {
-            if (dp[i]) { // If index i is reachable
+            if (dp[i]) { // If index i is reachable, we continue to check if we
+                         // can reach   the next index
                 for (int j = 1; j <= nums[i] && i + j < n; j++) {
                     dp[i + j] = true; // Mark reachable indices
-                    if (dp[n -
-                           1]) // If the last index is reachable, return early
+                    if (dp[n -1]) // If the last index is reachable, return early
                         return true;
                 }
             }
         }
-
-        return dp[n - 1]; // Return whether the last index is reachable
+        return dp[n -1]; // Return whatever boolean is assigned to the last index.
     }
 };
